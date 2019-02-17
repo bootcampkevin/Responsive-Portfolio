@@ -1,15 +1,5 @@
 /**
- * HW 1
- **/
-
-/**
-   * Teal color (used for headings and backgrounds): `#4aaaa5`
-   * Regular font color (used for paragraphs and all text besides the headings): `#777777`
-   * Main header background color: `#ffffff`
-   * Main header border color: `#cccccc`
-   * Footer background color: `#666666`
-   * Main content background color: `#ffffff`
-   * Main content border color: `#dddddd`
+ * HW 2
  **/
 
 body {
@@ -26,11 +16,12 @@ body {
   border-bottom: 2px solid #cccccc;
   margin: 0;
   padding: 0;
-  height: auto;
+  margin: 0 auto; 
 }
-.headcontent{
-  width: 960px; 
-  margin: 0 auto;  
+.header-container{
+   width: 960px;
+   height: 68px;
+   margin: 0 auto;
 }
 
 .name {
@@ -40,20 +31,24 @@ body {
   font-size: 1.5em;
   width: 200px;
   height: 69px;
-  margin: 0px; 
+  margin: 0px;
   padding: 0 25px;
   float: left;
   color: #ffffff;
-  line-height: 65px; 
-  /****hacked this to aling text in center.****/
-  
+  line-height: 65px;/****hacked this to align text in center.****/
+  text-decoration: none;
+
+}
+
+.header-right {
+  float: right;
 }
 
 .nav {
   margin: 0;
   padding: 0;
-  overflow: hidden;
-  /* display: inline; */
+  /* overflow: hidden; */
+  float: right;
 }
 
 .nav ul {
@@ -61,38 +56,34 @@ body {
   margin: 0 0 0 0;
   padding: 0px;
   overflow: hidden;
+  background-color: #ffffff;
 }
 
-.nav li {
-  float: right;
-  background-color: #ffffff;  
-}
 
-.nav li a {
+.nav a {
   display: inline-block;
   color: #777777;
   text-align: center;
   padding: 25px 10px;
-  text-decoration: none;  
+  text-decoration: none;
 }
 
-.nav li a:hover {
+.nav a:hover {
   background-color: #eeeeee;
   color: #4aaaa5;
 }
 
-.nav li a:hover:not(.active) {
+.nav a:hover:not(.active) {
   background-color: #4aaaa5;
   color: #ffffff;
 }
 
 .content {
-  width: 960px; 
+  width: 960px;
   margin: 25px auto 150px auto;
-  padding: 0; 
+  padding: 0;
   background-color: #ffffff;
   overflow: auto;
-  
 }
 
 .about {
@@ -100,9 +91,7 @@ body {
   border: 1px solid #cccccc;
 }
 
-
-
-h1{
+h1 {
   color: #4aaaa5;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 1.5em;
@@ -123,19 +112,20 @@ h1{
   color: #777777;
   padding-top: 15px;
 }
- .headshot {
+
+.headshot {
   /* position: relative; */
   float: left;
   margin-right: 25px;
   margin-bottom: 25px;
-} 
+}
 .footer {
   border-top: 8px solid #4aaaa5;
   text-align: center;
   color: #cccccc;
   padding: 25px 0 8px 0;
   background-color: #666666;
-  font-size: .7em;  
+  font-size: 0.7em;
   position: absolute;
   width: 100%;
 }
@@ -147,40 +137,40 @@ h1{
   clear: both;
 }
 
-#name, #email{
-  width: 97%; 
+#name,
+#email {
+  width: 97%;
   padding: 8px;
-  border: 1px solid #ccc; 
-  margin-top: 6px; 
+  border: 1px solid #ccc;
+  margin-top: 6px;
   margin-bottom: 6px;
   margin-right: 0;
 }
 
-#message{
+#message {
   width: 97%;
-  height: 150px;  
+  height: 150px;
   padding: 8px;
-  border: 1px solid #ccc; 
-  margin-top: 6px; 
+  border: 1px solid #ccc;
+  margin-top: 6px;
   margin-bottom: 6px;
   margin-right: 0;
   overflow: scroll;
-} 
+}
 
-.button{
+.button {
   background-color: #4aaaa5;
   height: 30px;
   width: 70px;
   color: #ffffff;
-  
 }
 .row-portfolio {
-margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 .col-portfolio {
   float: left;
   margin: 20px 25px 0 0;
-} 
+}
 
 .title {
   float: left;
@@ -195,4 +185,72 @@ margin-bottom: 15px;
   margin: -85px 0 0 0;
   text-align: center;
   font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+
+/********  MEDIA QUERIES  *********/
+
+
+
+@media only screen and (max-width: 980px) {
+  
+.content{
+  margin-left: 60px;
+  width: 660px;
+}
+.header{
+  padding-left: 60px;
+  
+}
+.header-container{
+  width: 100%;
+}
+
+}
+
+@media only screen and (max-width: 768px) {
+  .content{
+    margin-left: 30px;
+    width: 560px;
+  }
+  .header{
+    padding-left: 30px;
+    
+  }
+  .header-container{
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .content{
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 90%;
+  }
+  .header{
+    padding-left: 0px;    
+    
+  }
+  .header-container{
+    height: 137px;
+  }
+  .nav {
+    float: none;
+    text-align: center;
+   
+  }
+  
+  .name{
+    width: 100%;
+    text-align: center;
+  }
+
+  .headshot {
+    text-align: center;
+    float: none; 
+    margin: 10px auto;
+    
+  }
+
 }

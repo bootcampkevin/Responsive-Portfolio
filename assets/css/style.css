@@ -9,6 +9,8 @@
 - portfolio in 640 has underlined text. 
 - reuse hw solution message boxes?
 
+-use sticky footer?
+
  */
 
 body {
@@ -238,18 +240,25 @@ h1 {
   }
   .header {
     padding-left: 0px;
+    
   }
   .header-container {
-    height: 180px;
+    height: 120px;
   }
   .nav {
     float: none;
     text-align: center;
   }
+  .nav a{
+    height: 40px;
+    padding: 4px;
+  }
 
   .name {
     width: 100%;
     text-align: center;
+    line-height: 80px;
+    height: 80px;
   }
 
   .headshot {

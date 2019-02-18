@@ -2,13 +2,27 @@
  * HW 2
  **/
 
+ /*
+
+ QUESTIONS to ask TA's
+- portfolio hover has ~20px on bottom.
+- portfolio in 640 has underlined text. 
+- reuse hw solution message boxes?
+
+ */
+
 body {
   background-image: url("../images/bg.png");
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
+  font-size: 18px;
+  line-height: 34px;
   color: #777777;
-  position: relative;
+  /* position: relative; */
+}
+* {
+  box-sizing: border-box;
 }
 
 .header {
@@ -20,7 +34,7 @@ body {
 }
 .header-container {
   width: 960px;
-  height: 68px;
+  height: 90px;
   margin: 0 auto;
 }
 
@@ -29,25 +43,21 @@ body {
   background: #4aaaa5;
   font-weight: bold;
   font-size: 1.5em;
-  width: 200px;
-  height: 69px;
+  width: 270px;
+  height: 90px;
   margin: 0px;
   padding: 0 25px;
   float: left;
   color: #ffffff;
-  line-height: 65px; /****hacked this to align text in center.****/
+  line-height: 90px; /****hacked this to align text in center.****/
   text-decoration: none;
-}
-
-.header-right {
-  float: right;
 }
 
 .nav {
   margin: 0;
   padding: 0;
   /* overflow: hidden; */
-  float: right;
+  float: right;  
 }
 
 .nav ul {
@@ -62,8 +72,9 @@ body {
   display: inline-block;
   color: #777777;
   text-align: center;
-  padding: 25px 10px;
+  padding: 30px 10px;
   text-decoration: none;
+  height: 90px;
 }
 
 .nav a:hover {
@@ -76,18 +87,20 @@ body {
   color: #ffffff;
 }
 
+
+/****** main *****/
+
 .content {
   width: 960px;
-  margin: 25px auto 150px auto;
-  padding: 0;
+  min-height: calc(100vh - 70px);
+  margin: 35px auto 150px auto;
+  padding: 25px;
   background-color: #ffffff;
   overflow: auto;
+  border-bottom: 2px solid #dddddd;
 }
 
-.about {
-  padding: 25px;
-  border: 1px solid #cccccc;
-}
+
 
 h1 {
   color: #4aaaa5;
@@ -100,20 +113,24 @@ h1 {
 }
 
 .line {
-  border: 1px solid #cccccc;
+  border: 1.5px solid #cccccc;
 }
 
+.main-section{
+  padding: 0px; 
+}
 .main {
   width: 100%;
   overflow: auto;
   clear: both;
   color: #777777;
-  padding-top: 15px;
+  /* padding-top: 15px; */
 }
 
 .headshot {
   /* position: relative; */
   float: left;
+  margin-top: 25px;
   margin-right: 25px;
   margin-bottom: 25px;
 }
@@ -147,7 +164,7 @@ h1 {
 
 #message {
   width: 96%;
-  height: 150px;
+  height: 200px;
   padding: 8px;
   border: 1px solid #ccc;
   margin-top: 6px;
@@ -167,14 +184,14 @@ h1 {
 }
 .col-portfolio {
   float: left;
-  margin: 20px 25px 0 0;
+  padding: 25px 35px 0 0;
 }
 
 .title {
   float: left;
   width: 250px;
-  height: 40px;
-  padding: 18px 0 0 0;
+  height: 65px;
+  padding: 16px 0 0 0;
   color: white;
   background: #4aaaa5;
   z-index: 50;
@@ -190,7 +207,7 @@ h1 {
 @media only screen and (max-width: 980px) {
   .content {
     margin-left: 60px;
-    width: 602px;
+    width: 620px;
   }
   .header {
     padding-left: 60px;
@@ -203,7 +220,7 @@ h1 {
 @media only screen and (max-width: 768px) {
   .content {
     margin-left: 30px;
-    width: 602px;
+    width: 620px;
   }
   .header {
     padding-left: 30px;
@@ -223,7 +240,7 @@ h1 {
     padding-left: 0px;
   }
   .header-container {
-    height: 137px;
+    height: 180px;
   }
   .nav {
     float: none;
@@ -238,7 +255,8 @@ h1 {
   .headshot {
     text-align: center;
     float: none;
-    margin: 10px auto;
+    /* TODO Resize the image size */
+    margin: 20px auto;
   }
   .col-portfolio {
     /* margin-left: auto;
@@ -252,6 +270,7 @@ h1 {
     margin-right: auto;
     float: none;
     position: relative;
-    text-decoration: none;
+    /* text-decoration: none; */
   }
+ 
 }

@@ -2,17 +2,6 @@
  * HW 2
  **/
 
- /*
-
- QUESTIONS to ask TA's
-- portfolio hover has ~20px on bottom.
-- portfolio in 640 has underlined text. 
-- reuse hw solution message boxes?
-
--use sticky footer?
-
- */
-
 body {
   background-image: url("../images/bg.png");
   font-family: Arial, Helvetica, sans-serif;
@@ -249,7 +238,7 @@ h1 {
     float: none;
     text-align: center;
   }
-  .nav a{
+  .nav a {
     height: 40px;
     padding: 4px;
   }
@@ -270,7 +259,7 @@ h1 {
   .col-portfolio {
     /* margin-left: auto;
     margin-right: auto; */
-    padding: 18px 0;
+    padding: 18px 0 0 0;
     text-align: center;
     float: none;
   }
@@ -279,7 +268,11 @@ h1 {
     margin-right: auto;
     float: none;
     position: relative;
+    /* text-decoration: none !important; */
     /* text-decoration: none; */
+  }
+  .title a{
+    text-decoration: none !important;
   }
  
 }

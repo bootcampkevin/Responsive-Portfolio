@@ -40,14 +40,13 @@ body {
   padding: 0 25px;
   float: left;
   color: #ffffff;
-  line-height: 90px; /****hacked this to align text in center.****/
+  line-height: 90px; 
   text-decoration: none;
 }
 
 .nav {
   margin: 0;
   padding: 0;
-  /* overflow: hidden; */
   float: right;  
 }
 
@@ -253,12 +252,9 @@ h1 {
   .headshot {
     text-align: center;
     float: none;
-    /* TODO Resize the image size */
     margin: 20px auto;
   }
   .col-portfolio {
-    /* margin-left: auto;
-    margin-right: auto; */
     padding: 18px 0 0 0;
     text-align: center;
     float: none;
@@ -267,9 +263,7 @@ h1 {
     margin-left: auto;
     margin-right: auto;
     float: none;
-    position: relative;
-    /* text-decoration: none !important; */
-    /* text-decoration: none; */
+    position: relative;   
   }
   .title a{
     text-decoration: none !important;
